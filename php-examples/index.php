@@ -6,7 +6,7 @@
 	<title>PHP Examples</title>
 </head>
 
-<body>
+<body style="background: black; color: white;">
 
 	<h1>PHP Examples</h1>
 
