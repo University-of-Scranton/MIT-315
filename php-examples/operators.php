@@ -15,7 +15,7 @@
 		$num= 10;
 		print $num + 5; //15
 		print $num - 5; //5
-		print $num * 5; //5
+		print $num * 5; //50
 		print $num / 5; //2
 		print $num % 5; //0
 		print $num % 7; //3
@@ -36,6 +36,7 @@
 	
 	<?php
 		$bool= 10 == 10; //true
+		$bool= 10 == "10"; //true
 		$bool2= 10 == 20; //false
 		$bool3= 10 === "10"; //false
 		

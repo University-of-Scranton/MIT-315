@@ -13,16 +13,16 @@
 	<?php	
 		$num= 10;
 		
-		if($num >= 10){
-			print "$num is greater than or equal to 10!<br/>";
+		if($num < 10){
+			print '$num is greater than or equal to 10!<br/>';
 		}else{
 			print "$num is not greater than or equal to 10!<br/>";
 		}
 		
 		
 		
-		$bool= true;
-		$a= !$bool;
+		$bool= false;
+		$a= !$bool; //false
 		
 		if($bool && $a){
 			print "This will not print.<br/>";
@@ -30,6 +30,20 @@
 			print "This will print<br/>";
 		}else{
 			print "This will not print.<br/>";
+		}
+
+		//case/switch
+		$name= "Joe";
+
+		switch ($name){
+			case "Joe":
+				print "Best<br/>";
+				break;
+			case "Erin":
+				print "Actually Best<br/>";
+				break;
+			default:
+				print "Just OK<br/>";
 		}
 	
 	?>
@@ -61,12 +75,29 @@
 	<h3>Foreach Loop</h3>
 	
 	<?php
+
 		$array = array("red", "green", "blue", "pink", "purple", "yellow");
 	
 		foreach($array as $a){
 			print "$a<br/>";
 		}
+
+
+		$people= array( "Joe" => 28,
+						"Erin" => 23,
+						"Phil" => 27,
+						"Jenn" => 26,
+						"Bob" => 54
+			);
+
+		foreach($people as $name => $age){
+			print "<p>$name is $age years old.</p>";
+		}
 	?>
+
+<pre>
+<?php var_dump($people); ?>
+</pre>
 	
 	
 	
