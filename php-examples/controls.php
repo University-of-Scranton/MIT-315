@@ -93,6 +93,13 @@
 		foreach($people as $name => $age){
 			print "<p>$name is $age years old.</p>";
 		}
+
+		reset($people);
+
+		$dude= current($people);
+		echo "this --> ". key($people);
+
+		
 	?>
 
 <pre>
