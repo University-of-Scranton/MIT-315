@@ -8,11 +8,19 @@
 
 <body>
 
+	<pre>
+		<?php print_r($_REQUEST); ?>
+	</pre>
+
 	<h1>POST and GET!</h1>
 
 	<?php
 	
-	if(isset($_POST['name'])){
+	$bar= null;
+
+	if(isset($bar)) print "wooo";
+
+	if(isset($_POST['submit'])){
 		$name= $_POST['name'];
 		
 		echo "<h2>Hello, $name</h2>";
