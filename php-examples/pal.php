@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 /**
 DETERMINE IF A STRING IS A
 PALINDROME
@@ -15,6 +15,8 @@ if(isset($_POST['string'])){
 	if(strlen($string) == 0){
 		print "You submitted a blank string, stupid.";
 	}else{
+
+		$_SESSION['guesses'][]= $string;
 
 		$string= strtolower($string); 
 		$string= str_ireplace(" ", "", $string); 
@@ -33,8 +35,9 @@ if(isset($_POST['string'])){
 			print "<p>{$_POST['string']} is not a pal here, budday.</p>";
 		}
 	}
-
 }
+
+	print_r($_SESSION['guesses']);
 
 ?>
 
