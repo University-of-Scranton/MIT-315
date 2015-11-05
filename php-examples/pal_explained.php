@@ -1,17 +1,27 @@
 <?php
+
 /**
 DETERMINE IF A STRING IS A
 PALINDROME
 **/
-session_start();
 
 if ( isset( $_POST['string'] ) ) {
+
 	$string= $_POST['string'];
-	$_SESSION['last_guess'] = $string;
+	echo '<p>Original, Submitted String: "' . $string . '"</p>';
+
 	$string= trim($string);
+
+	echo '<p>Trimmed String: "' . $string . '"</p>';
+
 	$string= strtolower($string);
 
+	echo '<p>Lowercase String: "' . $string . '"</p>';
+
 	$string= str_ireplace(" ", "", $string);
+
+	echo '<p>replaced String: "' . $string . '"</p>';
+
 	$array= str_split($string);
 
 	var_dump( $array );
@@ -20,7 +30,12 @@ if ( isset( $_POST['string'] ) ) {
 
 	while( count( $array ) > 0 ) {
 		$popped = array_pop($array);
+		echo "<p>$popped</p>";
+
 		$reverse .= $popped;
+
+		echo "<p>$reverse</p>";
+		var_dump( $array );
 	}
 
 	if($reverse == $string){
@@ -32,9 +47,7 @@ if ( isset( $_POST['string'] ) ) {
 }
 
 ?>
-<?php if( isset( $_SESSION['last_guess'] ) ) { ?>
-<p>The last string you tried was: <?php echo $_SESSION['last_guess']; ?>
-<?php } ?>
+
 <form method="post">
 	<input type="text" name="string" />
 	<input type="submit" name="submit" value="Doo It." />
