@@ -10,6 +10,10 @@
 
 <?php
 
+set_cookie("name", "value");
+
+//$_COOKIE['name'] => 'value'
+
 function print_array($a){
 
 	print "<pre>";
